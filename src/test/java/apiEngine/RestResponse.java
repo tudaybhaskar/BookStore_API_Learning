@@ -29,8 +29,12 @@ public class RestResponse<T> implements IRestResponse<T> {
 
 	public boolean isSuccessful() {
 		int code = response.getStatusCode();
-		if( code == 200 || code == 201 || code == 202 || code == 203 || code == 204 || code == 205) return true;
-		return false;
+		if( code == 200 || code == 201 || code == 202 || code == 203 || code == 204 || code == 205) {
+			return true;
+		}else {
+			System.out.println("Status line : " + response.getStatusLine());
+			return false;
+		}
 	}
 
 	public String getStatusDescription() {

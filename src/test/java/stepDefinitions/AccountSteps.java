@@ -11,11 +11,13 @@ public class AccountSteps extends BaseStep {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@Given("I am an User and is Authorized")
+	@Given("User is Authorized")
 	public void iAmAnAuthorizedUser(){
 		
 		AuthorizationRequest authRequest = new AuthorizationRequest("TestUser3", "Test@1431" ) ;
 		getEndPoints().authenticateUser(authRequest);
+		getEndPoints().authorizeUser(authRequest);
+		
 		
 	}
 	

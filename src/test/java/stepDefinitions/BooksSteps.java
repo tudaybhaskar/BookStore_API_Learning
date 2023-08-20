@@ -25,37 +25,40 @@ public class BooksSteps extends BaseStep {
 	private final String USER_ID = "8e56b746-7261-4dfb-a7bc-d28c99514a16" ;
 	private Response response;
 	private IRestResponse<UserAccount> userAccountResponse;
+	private IRestResponse<Books> add_booksResponse;
 	private Book book;
 	
-	@Given("A list of Books are available")
+	@Given("A list of books are available")
 	public void listOfBooksAreAvailable() {
 		IRestResponse<Books> booksResponse = getEndPoints().getBooks() ;
 		book = booksResponse.getBody().books.get(4);
 	}
 	
-	@When("I add a book to my reading list")
+	@When("I add a book to my collection")
 	public void addBookInList() {
 		ISBN isbn = new ISBN(book.isbn);
 		AddBooksRequest addBook_request = new AddBooksRequest(USER_ID, isbn) ;
-		userAccountResponse = getEndPoints().getUserAccount(USER_ID) ;
+		add_booksResponse = getEndPoints().addBooks(addBook_request) ;
 	}
 	
-	@Then("The book is added to userAccount list")
+	@Then("the book is added to collection")
 	public void bookIsAddedtoUserList() {
-		Assert.assertTrue(userAccountResponse.isSuccessful());
-		Assert.assertEquals(201, userAccountResponse.getStatusCode() );
+		Assert.assertEquals(201, add_booksResponse.getStatusCode() );
 		
+		userAccountResponse = getEndPoints().getUserAccount(USER_ID) ;
+	
+		Assert.assertTrue(userAccountResponse.isSuccessful());
 		Assert.assertEquals(USER_ID, userAccountResponse.getBody().userId );
 		Assert.assertEquals(book.isbn, userAccountResponse.getBody().books.get(0).isbn);
 	}
 	
-	@When("I remove a book from my reading list")
+	@When("I remove a book from my collection")
 	public void removeBookFromList() {
 		DeleteBookRequest delBookRequest = new DeleteBookRequest(book.isbn, USER_ID) ;
 		response = getEndPoints().removeBook(delBookRequest) ;
 	}
 	
-	@Then("The books is removed")
+	@Then("the book is removed from my collection")
 	public void bookIsRemoved() {
 		
 		Assert.assertEquals(204, response.getStatusCode()) ;

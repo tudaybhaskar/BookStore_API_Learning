@@ -36,7 +36,7 @@ public class EndPoints_InstanceMethods {
 		Token tokenResponse = response.getBody().jsonPath().getObject("$", Token.class) ;
 		token = tokenResponse.token ;
 		System.out.println("token: " + tokenResponse.token);
-		request.header("Authorization", "Bearer " + tokenResponse.token ) ;
+		request.header("Authorization", "Bearer " + token ) ;
 		System.out.println("Request set : " + request.auth().toString() ) ;
 	}
 
@@ -70,7 +70,7 @@ public class EndPoints_InstanceMethods {
 	
 	public IRestResponse<UserAccount> getUserAccount( String userId ) {
 		
-		Response response = request.header("Authorization", "Bearer " + token ).get( Route.userAccount(userId) ) ;
+		Response response = request.get( Route.userAccount(userId) ) ;
 		return new RestResponse<UserAccount>( UserAccount.class, response ) ;
 	}
 	

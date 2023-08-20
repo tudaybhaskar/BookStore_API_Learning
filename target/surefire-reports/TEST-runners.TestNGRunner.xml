@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runners.TestNGRunner" time="11.775" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/udayabhaskar/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.9.100.20230519-1558/jars/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@11/11.0.19/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -Dstyle.color=always test"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/Users/udayabhaskar/Documents/eclipseWorkspace/BookStore_API_Learning/EMBEDDED"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/udayabhaskar"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="jansi.mode" value="force"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk@11/11.0.19/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="style.color" value="always"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="11.0.19+0"/>
+    <property name="user.name" value="udayabhaskar"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.5"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/m_/37rcs6fj2b94rbwps3b2q9w80000gn/T/"/>
+    <property name="java.version" value="11.0.19"/>
+    <property name="user.dir" value="/Users/udayabhaskar/Documents/eclipseWorkspace/BookStore_API_Learning"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/udayabhaskar/Documents/eclipseWorkspace/BookStore_API_Learning"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="m2e.build.project.data.socket.port" value="49666"/>
+    <property name="java.library.path" value="/Users/udayabhaskar/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="11.0.19+0"/>
+    <property name="classworlds.conf" value="/Users/udayabhaskar/Documents/eclipseWorkspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf17613490536817777309.tmp"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="runScenario" classname="runners.TestNGRunner" time="6.304">
+    <failure message=" Book is not added expected [201] but found [401]" type="java.lang.AssertionError">java.lang.AssertionError:  Book is not added expected [201] but found [401]
+</failure>
+    <system-out><![CDATA[
+Scenario: The authorized user adding books and deleting from his collection # src/test/resources/bookStore/features/BookStore_UsingInstanceMethods_E2E.feature:6
+Request set : io.restassured.internal.AuthenticationSpecificationImpl@73d62b5
+  Given user gives username and password and generates a token              # stepDefinitions.BookStore_InstanceMethods_E2E.user_gives_username_and_password_and_generates_a_token()
+  Given A collectionList of books                                           # stepDefinitions.BookStore_InstanceMethods_E2E.a_collection_list_of_books()
+  When authUser adds a book                                                 # stepDefinitions.BookStore_InstanceMethods_E2E.auth_user_adds_a_book()
+  Then the book is added book Library                                       # stepDefinitions.BookStore_InstanceMethods_E2E.the_book_is_added_book_library()
+      java.lang.AssertionError:  Book is not added expected [201] but found [401]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at stepDefinitions.BookStore_InstanceMethods_E2E.the_book_is_added_book_library(BookStore_InstanceMethods_E2E.java:59)
+	at ✽.the book is added book Library(file:///Users/udayabhaskar/Documents/eclipseWorkspace/BookStore_API_Learning/src/test/resources/bookStore/features/BookStore_UsingInstanceMethods_E2E.feature:9)
+
+  When the auth user removes the book                                       # stepDefinitions.BookStore_InstanceMethods_E2E.the_auth_user_removes_the_book()
+  Then the book is removed from library                                     # stepDefinitions.BookStore_InstanceMethods_E2E.the_book_is_removed_from_library()
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+</testsuite>

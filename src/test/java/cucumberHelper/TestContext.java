@@ -1,6 +1,7 @@
 package cucumberHelper;
 
 import apiEngine.EndPoints_InstanceMethods;
+import configs.ConfigReader;
 import enums.Context;
 
 public class TestContext {
@@ -12,9 +13,9 @@ public class TestContext {
 	
 	//Constructor
 	public TestContext() {
-		endPoints = new EndPoints_InstanceMethods(BASE_URL) ;	
+		endPoints = new EndPoints_InstanceMethods(ConfigReader.getInstance().getBaseUrl()) ;	
 		scenarioContext = new ScenarioContext() ;
-		scenarioContext.setContext(Context.USER_ID, USER_ID);
+		scenarioContext.setContext(Context.USER_ID, ConfigReader.getInstance().getUserId());
 	}
 	
 	public EndPoints_InstanceMethods getEndPoints() {

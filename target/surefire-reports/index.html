@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-failed">Surefire suite</span>
+              <span class="suite-name border-passed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Surefire_suite">
+                    <div class="method-list-content passed suite-Surefire_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="runners.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;The authorized user adding books and deleting from his collection&quot;, &quot;Test using the instance method...)">runScenario("The authorized user adding books and deleting from his collection", "Test using the instance method...)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runners.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;An Authorized user can Add and Remove to his collection&quot;, &quot;Cucumber E2E BookStore API functionality...)">runScenario("An Authorized user can Add and Remove to his collection", "Cucumber E2E BookStore API functionality...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Surefire_suite -->
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,29 +118,24 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-failed">
+          <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">runners.TestNGRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;The authorized user adding books and deleting from his collection&quot;, &quot;Test using the instance method...)">
-                  </a> <!-- runScenario("The authorized user adding books and deleting from his collection", "Test using the instance method...) -->
+                  <a name="runScenario(&quot;An Authorized user can Add and Remove to his collection&quot;, &quot;Cucumber E2E BookStore API functionality...)">
+                  </a> <!-- runScenario("An Authorized user can Add and Remove to his collection", "Cucumber E2E BookStore API functionality...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("The authorized user adding books and deleting from his collection","Test using the instance methods")</span>
-                  <div class="stack-trace">java.lang.AssertionError:  Book is not added expected [201] but found [401]
-	at stepDefinitions.BookStore_InstanceMethods_E2E.the_book_is_added_book_library(BookStore_InstanceMethods_E2E.java:59)
-	at ✽.the book is added book Library(file:///Users/udayabhaskar/Documents/eclipseWorkspace/BookStore_API_Learning/src/test/resources/bookStore/features/BookStore_UsingInstanceMethods_E2E.feature:9)
-... Removed 6 stack frames
-</div> <!-- stack-trace -->
+                  <span class="parameters">("An Authorized user can Add and Remove to his collection","Cucumber E2E BookStore API functionality")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-failed -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -204,12 +199,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runners.TestNGRunner')
-data.setCell(0, 3, 6300);
+data.setCell(0, 3, 8017);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -237,18 +232,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runners.TestNGRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@719c1faf)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@1377b1a0)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("The authorized user adding books and deleting from his collection", "Test using the instance method...)</span>
-                <span class="method-start">230 ms</span>
+                <span class="method-name">runScenario("An Authorized user can Add and Remove to his collection", "Cucumber E2E BookStore API functionality...)</span>
+                <span class="method-start">231 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">6535 ms</span>
+                <span class="method-start">8252 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

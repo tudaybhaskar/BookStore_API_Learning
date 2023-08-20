@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Aug 19 17:29:55 IST 2023</td>
+<td>Started on:</td><td>Sun Aug 20 17:39:03 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6583 ms)</td>
+<tr><td>Total time:</td><td>8 seconds (8304 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,23 +76,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The authorized user adding books and deleting from his collection", "Test using the instance methods"</td>
-<td><div><pre>java.lang.AssertionError:  Book is not added expected [201] but found [401]
-	at stepDefinitions.BookStore_InstanceMethods_E2E.the_book_is_added_book_library(BookStore_InstanceMethods_E2E.java:59)
-	at ✽.the book is added book Library(file:///Users/udayabhaskar/Documents/eclipseWorkspace/BookStore_API_Learning/src/test/resources/bookStore/features/BookStore_UsingInstanceMethods_E2E.feature:9)
-... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1518712038", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1518712038'><pre>java.lang.AssertionError:  Book is not added expected [201] but found [401]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:1418)
-	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at stepDefinitions.BookStore_InstanceMethods_E2E.the_book_is_added_book_library(BookStore_InstanceMethods_E2E.java:59)
-	at ✽.the book is added book Library(file:///Users/udayabhaskar/Documents/eclipseWorkspace/BookStore_API_Learning/src/test/resources/bookStore/features/BookStore_UsingInstanceMethods_E2E.feature:9)
-</pre></div></td>
-<td>6</td>
-<td>runners.TestNGRunner@48f278eb</td></tr>
+<td title='runners.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "An Authorized user can Add and Remove to his collection", "Cucumber E2E BookStore API functionality"</td>
+<td></td>
+<td>8</td>
+<td>runners.TestNGRunner@5acf93bb</td></tr>
 </table><p>
 </body>
 </html>
